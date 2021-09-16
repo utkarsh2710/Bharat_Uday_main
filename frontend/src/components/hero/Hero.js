@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import Video from '../../videos/video.mp4'
+import Video from '../../videos/video 2.mp4'
+import { Button } from '../ButtonElements'
 import {
     HeroContainer,
     HeroBg,
@@ -13,7 +14,7 @@ import {
 } from './HeroElements'
 
 const Hero = () => {
-    const { hover, setHover } = useState(false)
+    const [hover, setHover] = useState(false)
 
     const onHover = () => {
         setHover(!hover)
@@ -30,7 +31,11 @@ const Hero = () => {
                 <HeroH1>Empowering young minds</HeroH1>
                 <HeroP>dfsdfdsxfsdf</HeroP>
                 <HeroBtnWrapper>
-                    <Button to='signin' onMouseEnter={onHover} onMouseLeave={onHover}>
+                    <Button to='signin'
+                        onMouseEnter={onHover}
+                        onMouseLeave={onHover}
+                        primary="true"
+                        dark="true">
                         Get started {hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
                 </HeroBtnWrapper>
