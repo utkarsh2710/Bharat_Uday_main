@@ -4,10 +4,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import SignIn from '../components/signin/SignIn'
+import LogIn from '../components/login/LogIn'
 import SignUp from '../components/signup/SignUp'
 
-const Signin = () => {
+const SignIn = () => {
     const [value, setValue] = useState(0)
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -48,7 +48,7 @@ const Signin = () => {
                 <Tab label="Sign Up" />
             </Tabs>
             <TabPanel value={value} index={0}>
-                <SignIn handleChange={handleChange} />
+                <LogIn handleChange={handleChange} />
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <SignUp />
@@ -58,4 +58,4 @@ const Signin = () => {
     )
 }
 
-export default Signin
+export default SignIn

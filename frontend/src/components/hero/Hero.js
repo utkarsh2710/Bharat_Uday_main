@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Video from '../../videos/video 2.mp4'
+import Video from '../../videos/video.mp4'
 import { Button } from '../ButtonElements'
 import {
     HeroContainer,
@@ -28,8 +28,8 @@ const Hero = () => {
                 <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
             </HeroBg>
             <HeroContent>
-                <HeroH1>Empowering young minds</HeroH1>
-                <HeroP>dfsdfdsxfsdf</HeroP>
+                <HeroH1>Empowering</HeroH1>
+                <HeroP>Young Minds</HeroP>
                 <HeroBtnWrapper>
                     <Button to='signin'
                         onMouseEnter={onHover}
