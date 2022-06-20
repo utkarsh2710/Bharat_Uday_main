@@ -32,24 +32,27 @@ const navSlide = () => {
     const allNavLinks = document.querySelectorAll(".nav-links li");
     const iconToggle = document.querySelector(".nav-icon i");
 
-    navIcon.addEventListener('click', () => {
-        nav.classList.toggle('nav-active');
+    if(navIcon){
+        navIcon.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
 
-        allNavLinks.forEach((link, index) => {
-            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+            allNavLinks.forEach((link, index) => {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+            });
+            /*Toggle icon class*/
+            if ((iconToggle).hasClass("fa fa-bars")) {
+                (iconToggle).addClass("fas fa-times").removeClass("fa fa-bars");
+            } else {
+                (iconToggle).addClass("fa fa-bars").removeClass("fas fa-times");
+            }
         });
-        /*Toggle icon class*/
-        if ((iconToggle).hasClass("fa fa-bars")) {
-            (iconToggle).addClass("fas fa-times").removeClass("fa fa-bars");
-        } else {
-            (iconToggle).addClass("fa fa-bars").removeClass("fas fa-times");
-        }
-    });
-
-
+}
 
 }
+
 navSlide();
+
 ReactDOM.render(<App />, document.getElementById("root"));
+
 
 
