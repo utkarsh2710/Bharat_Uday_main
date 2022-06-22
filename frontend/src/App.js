@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import SigninPage from './pages/SignIn'
+import SigninPage from './pages/signin'
 
 const App = () => {
   return (
